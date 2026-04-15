@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CREATE DATABASE IF NOT EXISTS vehicle_parking_system;
 USE vehicle_parking_system;
 
@@ -83,3 +84,16 @@ WHERE NOT EXISTS (SELECT 1 FROM parking_slots WHERE slot_number = 'A1');
 INSERT INTO parking_slots (slot_number, lane_name, status, remarks)
 SELECT 'A2', 'Lane A', 'AVAILABLE', 'Near gate'
 WHERE NOT EXISTS (SELECT 1 FROM parking_slots WHERE slot_number = 'A2');
+=======
+CREATE TABLE IF NOT EXISTS vehicle (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    vehicle_no TEXT NOT NULL,
+    owner_name TEXT,
+    contact_no TEXT,
+    vehicle_type TEXT,
+    parking_slot TEXT,
+    entry_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+    exit_time DATETIME,
+    parking_fee INTEGER DEFAULT 0
+);
+>>>>>>> origin/database

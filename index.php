@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 declare(strict_types=1);
 
@@ -10,3 +11,7 @@ use ParkingSystem\Core\Request;
 $request = Request::capture();
 $controller = new ApiController($request);
 $controller->dispatch();
+=======
+header('Location: index.html');
+exit;
+>>>>>>> origin/database

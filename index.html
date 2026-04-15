@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Parking Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <p class="eyebrow">Parking Operations</p>
+      <h1>Vehicle Parking Management System</h1>
+      <p class="subheading">Register parked vehicles, keep track of slot allocation, and review entry details in one place.</p>
+    </section>
+
+    <section class="card">
+      <form id="parkingForm" class="parking-form" autocomplete="off">
+        <div class="form-grid">
+          <div class="field">
+            <label for="vehicle_no">Vehicle Number</label>
+            <input type="text" id="vehicle_no" name="vehicle_no" placeholder="Enter vehicle number">
+          </div>
+
+          <div class="field">
+            <label for="owner">Owner Name</label>
+            <input type="text" id="owner" name="owner" placeholder="Enter owner name">
+          </div>
+
+          <div class="field">
+            <label for="contact">Contact Number</label>
+            <input type="text" id="contact" name="contact" placeholder="Enter contact number">
+          </div>
+
+          <div class="field">
+            <label for="vehicle_type">Vehicle Type</label>
+            <select id="vehicle_type" name="vehicle_type">
+              <option value="">Select vehicle type</option>
+              <option value="Car">Car</option>
+              <option value="Bike">Bike</option>
+              <option value="Truck">Truck</option>
+            </select>
+          </div>
+
+          <div class="field field-full">
+            <label for="slot">Parking Slot</label>
+            <input type="text" id="slot" name="slot" placeholder="Enter parking slot">
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">Park Vehicle</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card table-card">
+      <div class="section-heading">
+        <h2>Parked Vehicles</h2>
+        <p>Recently added entries appear here instantly.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Vehicle No</th>
+              <th>Owner</th>
+              <th>Contact</th>
+              <th>Type</th>
+              <th>Slot</th>
+              <th>Entry Time</th>
+            </tr>
+          </thead>
+          <tbody id="parkedVehiclesBody">
+            <tr class="empty-row" id="emptyStateRow">
+              <td colspan="6">No vehicles parked yet.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
